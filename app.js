@@ -1,12 +1,22 @@
-var todos = ["item 1", "item 2", "item 3"]
-var todosToo = ["item 1", "item 2", "item 3"]
+var todos = ['item 11', 'item 12', 'item 13']
 
-var faithFunc = function (something){
-    todosToo.push(something);
-    
-    console.log(todosToo);
+function displayTodos(){
+  console.log('MyTodos:', todos);
 }
 
+function addTodo(todo){
+  todos.push(todo);
+  displayTodos();
+}
 
+function changeTodo(position, newValue){
+  todos[position] = newValue;
+  displayTodos();
+}
+
+function deleteTodo(position){
+  todos.splice(position,1);
+  displayTodos();
+}
 
 
